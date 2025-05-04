@@ -78,7 +78,7 @@ export default async function getTitle(id) {
           country: e.text,
           cca2: e.id,
         })
-      ),
+      ) ?? [],
     },
     year: props.aboveTheFoldData.releaseDate.year,
     spokenLanguages: props.mainColumnData.spokenLanguages.spokenLanguages.map(

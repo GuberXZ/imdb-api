@@ -70,13 +70,13 @@ export default async function getTitle(id) {
       month: props.aboveTheFoldData.releaseDate.month,
       year: props.aboveTheFoldData.releaseDate.year,
       releaseLocation: {
-        country: props.mainColumnData.releaseDate?.country?.text,
-        cca2: props.mainColumnData.releaseDate?.country?.id,
+        country: props.mainColumnData.releaseDate?.country?.text ?? null,
+        cca2: props.mainColumnData.releaseDate?.country?.id ?? null,
       },
-      originLocations: props.mainColumnData.countriesOfOrigin.countries.map(
+      originLocations: props.mainColumnData.countriesOfOrigin?.countries?.map(
         (e) => ({
-          country: e.text,
-          cca2: e.id,
+          country: e.text ?? null,
+          cca2: e.id ?? null,
         })
       ) ?? [],
     },
